@@ -40,6 +40,7 @@ public class Helloworld {
         String b = scan.nextLine();
         String c = scan.nextLine();
         System.out.println(a + " " + b + " " + c);
+        System.out.println(c + " " + b + " " + a);
         
         System.out.println(rectangle(12.5, 55.8));
         System.out.println(evensOdds(5));
