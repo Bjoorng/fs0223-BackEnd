@@ -27,7 +27,7 @@ public class MainClass {
         
         scanner.close();
         
-        Sim sim = new Sim()
+        //Sim sim = new Sim();
 	}
 	
 	public static void printRectangle (Rectangle r) {
