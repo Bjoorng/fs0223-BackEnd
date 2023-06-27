@@ -26,6 +26,8 @@ public class MainClass {
         getAll(rectangle, rectangle2);
         
         scanner.close();
+        
+        Sim sim = new Sim()
 	}
 	
 	public static void printRectangle (Rectangle r) {
