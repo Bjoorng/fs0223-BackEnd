@@ -1,5 +1,4 @@
 package project_day_3;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +20,7 @@ public class Main {
 		int sLength = string.length();
 		if (sLength%2==0) {
 			System.out.println(string + " Has An Even Number Of Characters");
-		}else {
+		}else{
 			System.out.println(string + " Has An Odd Number Of Characters");
 		}
 	}
