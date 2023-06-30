@@ -74,8 +74,10 @@ public class Main {
 		volumeUpVideo(video2);
 		showImg(img);
 		
-		Element[] player = {song, video, img, video2, song2};
+		Element[] player = new Element[5];
+
 		playSomething(player);
+		
 	}
 		
 		private static void volumeUpAudio(Audio a) {
@@ -107,6 +109,7 @@ public class Main {
 		}
 		
 		private static void playSomething(Element[] e) {
+			generateArray(e);
 			System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
 			int input = Integer.parseInt(scan.nextLine());
 			while(input != 0) {
@@ -134,5 +137,42 @@ public class Main {
 			}
 			System.out.println("The Cycle Has Ended");
 			scan.close();
+		}
+		
+		private static void generateArray(Element[] e) {
+			for (int i = 0; i < 5; i++) {
+	        	
+	            System.out.print("Select the item type (1 = Audio, 2 = Video, 3 = Image): ");
+	            int type = Integer.parseInt(scan.nextLine());
+
+	            switch (type) {
+	                case 1:
+	                	System.out.print("Insert The Title For Your New Media Item: ");
+	                	String title = scan.nextLine();
+	                    System.out.print("Enter Audio duration: ");
+	                    int length = Integer.parseInt(scan.nextLine());
+
+	                    e[i] = new Audio(title, length);
+	                    break;
+	                case 2:
+	                	System.out.print("Insert The Title For Your New Media Item: ");
+	                	title = scan.nextLine();
+	                    System.out.print("Enter This Video's Duration: ");
+	                    length = Integer.parseInt(scan.nextLine());
+
+	                    e[i] = new Video(title, length);
+	                    break;
+	                case 3:
+	                	System.out.print("Insert The Title For Your New Media Item: ");
+	                	title = scan.nextLine();
+	                	System.out.print("Enter This Image's Brightness: ");
+	                	int brightness = Integer.parseInt(scan.nextLine());
+	                	e[i] = new Image(title, brightness);
+	                    break;
+	                default:
+	                    System.out.println("Value Not Recognized");
+	                    i--;
+	            }
+	        }
 		}
 }
