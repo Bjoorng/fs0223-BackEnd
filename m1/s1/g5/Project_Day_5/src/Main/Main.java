@@ -11,11 +11,11 @@ public class Main {
 		
 		System.out.println("Insert A Song's Title And It's Duration");
 		Audio song = new Audio(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(song.getTitle() + "- " + song.getLength());
+		System.out.println(song.getTitle() + " - " + song.getLength());
 		
 		System.out.println("Insert A Video's Title And It's Duration");
 		Video video = new Video(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(video.getTitle() + "- " + video.getLength());
+		System.out.println(video.getTitle() + " - " + video.getLength());
 		
 		System.out.println("Insert An Image's Title And It's Brightness");
 		Image img = new Image(scan.nextLine(), Integer.parseInt(scan.nextLine()));
@@ -23,11 +23,11 @@ public class Main {
 		
 		System.out.println("Insert Another Video's Title And It's Duration");
 		Video video2 = new Video(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(video2.getTitle() + "- " + video2.getLength());
+		System.out.println(video2.getTitle() + " - " + video2.getLength());
 		
 		System.out.println("Insert Another Song's Title And It's Duration");
 		Audio song2 = new Audio(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(song2.getTitle() + "- " + song2.getLength());
+		System.out.println(song2.getTitle() + " - " + song2.getLength());
 		
 		playAudio(song);
 		playVideo(video);
