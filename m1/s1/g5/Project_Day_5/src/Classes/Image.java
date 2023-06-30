@@ -4,7 +4,7 @@ import Interfaces.Brightness;
 
 public class Image extends Element implements Brightness{
 
-	private int brightness;
+	protected int brightness;
 	
 	public Image(String title, int brightness) {
 		super(title);

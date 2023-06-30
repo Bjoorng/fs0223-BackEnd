@@ -31,12 +31,32 @@ public class Main {
 		
 		playAudio(song);
 		playVideo(video);
+		volumeDwnAudio(song2);
+		volumeUpAudio(song2);
+		volumeDwnVideo(video2);
+		volumeUpVideo(video2);
 		showImg(img);
 		
 		Element[] player = {song, video, img, video2, song2};
 		playSomething(player);
 	}
 		
+		private static void volumeUpAudio(Audio a) {
+			a.volumeUp();
+		}
+		
+		private static void volumeDwnAudio(Audio a) {
+			a.volumeDwn();
+		}
+	
+		private static void volumeUpVideo(Video v) {
+			v.volumeUp();
+		}
+		
+		private static void volumeDwnVideo(Video v) {
+			v.volumeDwn();
+		}
+
 		private static void playAudio(Audio a) {
 			a.play();
 		}

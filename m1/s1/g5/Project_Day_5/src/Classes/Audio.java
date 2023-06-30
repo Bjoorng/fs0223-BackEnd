@@ -4,8 +4,8 @@ import Interfaces.Volume;
 
 public class Audio extends Element implements Volume {
 	
-	private int volume = 5;
-	private int length;
+	protected int volume = 5;
+	protected int length;
 	
 	public Audio(String title, int length) {
 		super(title);

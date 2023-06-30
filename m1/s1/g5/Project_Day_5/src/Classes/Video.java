@@ -5,9 +5,9 @@ import Interfaces.Volume;
 
 public class Video extends Element implements Brightness, Volume {
 	
-	private int brightness = 5;
-	private int volume = 5;
-	private int length;
+	protected int brightness = 5;
+	protected int volume = 5;
+	protected int length;
 	
 	public Video(String title, int length) {
 		super(title);
