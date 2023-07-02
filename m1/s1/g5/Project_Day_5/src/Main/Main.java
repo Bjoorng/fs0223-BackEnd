@@ -53,7 +53,7 @@ public class Main {
 	}
 
 	private static void playSomething(Element[] e, Scanner scan) {
-		System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
+		System.out.println("\u001B[46mChoose A Number Between 1 And 5 To Play Something Or 0 To Exit\u001B[0m");
 
 		while (scan.hasNextInt()) {
 			int input = Integer.parseInt(scan.nextLine());
@@ -64,7 +64,7 @@ public class Main {
 			if (input >= 1 && input <= 5) {
 				if (e[input - 1] instanceof Audio) {
 					e[input - 1].play();
-					System.out.println("Press 1 To Change The Volume. Press 0 If Everything's Fine.");
+					System.out.println("\u001B[46mPress 1 To Change The Volume. Press 0 If Everything's Fine.\u001B[0m");
 					e[input - 1].volumeControl();
 					e[input - 1].play();
 				} else if (e[input - 1] instanceof Video) {
@@ -72,39 +72,39 @@ public class Main {
 					e[input - 1].play();
 					while (options) {
 						System.out.println(
-								"Press 1 To Change The Volume or 2 To Change The Brightness. Press 0 If Everything's Fine.");
+								"\u001B[46mPress 1 To Change The Volume or 2 To Change The Brightness. Press 0 If Everything's Fine.\u001B[0m");
 						int mod = Integer.parseInt(scan.nextLine());
 						switch (mod) {
 						case 0:
 							options = false;
 							break;
 						case 1:
-							System.out.println("Change The Volume");
+							System.out.println("\u001B[46mChange The Volume\u001B[0m");
 							e[input - 1].volumeControl();
 							e[input - 1].play();
 							break;
 						case 2:
-							System.out.println("Change The Brightness");
+							System.out.println("\u001B[46mChange The Brightness\u001B[0m");
 							e[input - 1].brightnessControl();
 							e[input - 1].play();
 							break;
 						default:
-							System.out.println("Error: Invalid Input");
+							System.out.println("\u001B[46mError: Invalid Input\u001B[0m");
 						}
 					}
-					System.out.println("Enjoy Your Piece Of Content");
+					System.out.println("\u001B[45mEnjoy Your Piece Of Content\u001B[0m");
 				} else if (e[input - 1] instanceof Image) {
 					e[input - 1].play();
-					System.out.println("Press 1 To Change The Brightness. Press 0 If Everything's Fine.");
+					System.out.println("\u001B[46mPress 1 To Change The Brightness. Press 0 If Everything's Fine.\u001B[0m");
 					e[input - 1].brightnessControl();
 					e[input - 1].play();
 				}
 			} else {
-				System.out.println("Value Not Recognized");
+				System.out.println("\u001B[41mValue Not Recognized");
 			}
-			System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
+			System.out.println("\u001B[46mChoose A Number Between 1 And 5 To Play Something Or 0 To Exit\u001B[0m");
 		}
-		System.out.println("The Cycle Has Ended. Enjoy The Rest Of Your Day");
+		System.out.println("\u001B[43mThe Cycle Has Ended. Enjoy The Rest Of Your Day\u001B[0m");
 	}
 
 	private static Element[] generateArray() {
