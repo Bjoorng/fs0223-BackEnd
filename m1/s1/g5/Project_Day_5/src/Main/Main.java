@@ -1,4 +1,5 @@
 package Main;
+
 import java.util.Scanner;
 
 import Classes.*;
@@ -6,173 +7,143 @@ import Classes.*;
 public class Main {
 
 	static Scanner scan = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
-		
-		String textBlock = """ 
-							///////////*///////////////((((((((///((//((((((((((((((/////((,//(/(///(/((/,**
-							%%%%%%##((//***,,,*/,*****,,,,**/(,,,,,.,,....,**......,,....,/,.,,,*//*,***#,..
-							.....*.........  ..*.,,,,,,..,(((/..,,..,.....,,,.............*...,,***,,***....
-							 ....*.........   */.,*,.,,,,,,.,*...,..,,.....,,............./......,,**,**....
-							  ...*......      .*,,*,,,,,,,,,.*..,,,,,,*,.,,/,............./......,,*,,,,....
-							 ....*.. ..,      .*,,,,,,,,,,,,,/,*(%&&&&&&&&%%#/*.,........./.......,,,..,....
-							.....*.. .....    .*,,,,*,,,,/(#&%%###(#%##%##%&&&&&&&%&(,....(,......,,,..,/...
-							....,*.. .....    ,*,,**/(&%%((%#####%#(%%#%##%%&&&&&&&&&&#%*.(,........,..,#,..
-							,...*/............*/,/%%%###((((####%%##%#%%%%&&&&&%&%%%%%&%&&&*.,,.,,,,,..,#*,.
-							//*,,*.. ........./#%#(###((##((((#%##%%%%%%%#*(%%%%###%%%&%&%%%%%%(*,,,,,,,##,.
-							/*,.**..........,(%#(%((####%(#((##(#%%%%%%%#/#(,.(%%%%%&%%%%%%#%(.,((/*,**%&#*,
-							,...#/........*###%##%#(((#(((%####%#%%%%%#%&/(%(##%(#%%%##(((&&%/,*%(,##/,/%#*,
-							,...**......,,/%##########(((((##%%%##%%##&&&@&%#/(##%%%(#####%(#/*#(,(#(#%/##%,
-							,...**,....,*#%%%#(###((#(##(((##(((#%#(#&##(#/(####%%((#(#####(/(*%*/%%#/#(%%%,
-							....*/,.,,,*#%#####(####((((/(((##(#%(((/**(**(#((*/##//((###%(#%((((**(&#((/#%(
-							....***,,,,/%%###//((//(/(/*/((#######(/,,/,.,,....,&* ,.*/**/#(/(((/(**,,,///((
-							...,***,,,*(((###(#(((((/////(((//((#((/**,..*##&%*(&. (###*.,,,,*,*/**,,...,**#
-							..,*//*,,,/%%((#%##(((///*(*(///*//(///((**##&@&&%#%&%%&#@@%@@&/**,,.,,,,.....,,
-							.,,,//,,,,/#(((##%%#(#((/***,*,*///((//(%#((#%&&&#./#,*%&%&&@@@@&&%(/,,,**,..,.*
-							,,**/(,,*,/#(/((##%%%(#//*,*,,,/*//((/*/(##*,*//, //......*#&&&%#/(///*.......,/
-							.,,*/#,,,,*(##((/((%%%#(*,,.,,,*,,,(**(**((/,*/,*%%%%/*,..,*(//*,,,,.,........,(
-							,,***(,,,,/%%###//((%%%%%**...,,,,(/,*/,////(*,...,,,*,*,*,,/(/*,.*,,.........*(
-							,,,,*(,,/&&#(/(%#////(#%%#(,,,..*.,,*///,*//*,....,.*..*,..,.,*,,,,.,*........*(
-							.,,,,(*%%(#%&@@&#%/**//(#(((,,,....,,****,*,.,.......*.,.,.,...,,,,,,,..    .,/#
-							.,,,/&&&&%%#/((&@%(/(///(/#((,*,.,...,,*,,, .,,......*,**.,,,...*,,,.,...   ,/(%
-							.,,#&&&@@@@@%#/(#&%#(*/(////*(**,.*,..,.,,,,....,.....,..,,*,,.,..,,.....  ,*#(#
-							,,#%%#%%%&@@@&///###///((///////*,,,,,,,,,..,........,,...,..,,.,****/*.. .#/#(#
-							*/%%%%%%&%%%@@%//*(#///(#((/***//,,,...,,.,*.,.,........ .. ..***//(((/#.. #(((#
-							(#%%&&@@@@&&&&%########%%%%%%#////,.,,,..,,*//*/,*,,.,,,.    (%%#%#%%%%%#,,/&%%&
-							/(%&&&&@&&&&&&%%%%#%%%%%%%%%&&&%%#//(,*,,*(#(///*##//#(,,.....%###########(.*##%
-							,,,#%%&%@&%#(///*/**/**/////*/////((#(/((/((//((*(#######(...**#################
-							..*/**//****,,,,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,*****#/#&#&*,,,,,,,.,,,...
-							""";
-		
-		System.out.println(textBlock);
-		
-		System.out.println("Insert A Song's Title And It's Duration");
-		Audio song = new Audio(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(song.getTitle() + " - " + song.getLength());
-		
-		System.out.println("Insert A Video's Title And It's Duration");
-		Video video = new Video(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(video.getTitle() + " - " + video.getLength());
-		
-		System.out.println("Insert An Image's Title And It's Brightness");
-		Image img = new Image(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(img.getTitle());
-		
-		System.out.println("Insert Another Video's Title And It's Duration");
-		Video video2 = new Video(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(video2.getTitle() + " - " + video2.getLength());
-		
-		System.out.println("Insert Another Song's Title And It's Duration");
-		Audio song2 = new Audio(scan.nextLine(), Integer.parseInt(scan.nextLine()));
-		System.out.println(song2.getTitle() + " - " + song2.getLength());
-		
-		playAudio(song);
-		playVideo(video);
-		volumeDwnAudio(song2);
-		volumeUpAudio(song2);
-		volumeDwnVideo(video2);
-		volumeUpVideo(video2);
-		showImg(img);
-		
-		Element[] player = new Element[5];
 
-		playSomething(player);
-		
+		String textBlock = """
+				///////////*///////////////((((((((///((//((((((((((((((/////((,//(/(///(/((/,**
+				%%%%%%##((//***,,,*/,*****,,,,**/(,,,,,.,,....,**......,,....,/,.,,,*//*,***#,..
+				.....*.........  ..*.,,,,,,..,(((/..,,..,.....,,,.............*...,,***,,***....
+				 ....*.........   */.,*,.,,,,,,.,*...,..,,.....,,............./......,,**,**....
+				  ...*......      .*,,*,,,,,,,,,.*..,,,,,,*,.,,/,............./......,,*,,,,....
+				 ....*.. ..,      .*,,,,,,,,,,,,,/,*(%&&&&&&&&%%#/*.,........./.......,,,..,....
+				.....*.. .....    .*,,,,*,,,,/(#&%%###(#%##%##%&&&&&&&%&(,....(,......,,,..,/...
+				....,*.. .....    ,*,,**/(&%%((%#####%#(%%#%##%%&&&&&&&&&&#%*.(,........,..,#,..
+				,...*/............*/,/%%%###((((####%%##%#%%%%&&&&&%&%%%%%&%&&&*.,,.,,,,,..,#*,.
+				//*,,*.. ........./#%#(###((##((((#%##%%%%%%%#*(%%%%###%%%&%&%%%%%%(*,,,,,,,##,.
+				/*,.**..........,(%#(%((####%(#((##(#%%%%%%%#/#(,.(%%%%%&%%%%%%#%(.,((/*,**%&#*,
+				,...#/........*###%##%#(((#(((%####%#%%%%%#%&/(%(##%(#%%%##(((&&%/,*%(,##/,/%#*,
+				,...**......,,/%##########(((((##%%%##%%##&&&@&%#/(##%%%(#####%(#/*#(,(#(#%/##%,
+				,...**,....,*#%%%#(###((#(##(((##(((#%#(#&##(#/(####%%((#(#####(/(*%*/%%#/#(%%%,
+				....*/,.,,,*#%#####(####((((/(((##(#%(((/**(**(#((*/##//((###%(#%((((**(&#((/#%(
+				....***,,,,/%%###//((//(/(/*/((#######(/,,/,.,,....,&* ,.*/**/#(/(((/(**,,,///((
+				...,***,,,*(((###(#(((((/////(((//((#((/**,..*##&%*(&. (###*.,,,,*,*/**,,...,**#
+				..,*//*,,,/%%((#%##(((///*(*(///*//(///((**##&@&&%#%&%%&#@@%@@&/**,,.,,,,.....,,
+				.,,,//,,,,/#(((##%%#(#((/***,*,*///((//(%#((#%&&&#./#,*%&%&&@@@@&&%(/,,,**,..,.*
+				,,**/(,,*,/#(/((##%%%(#//*,*,,,/*//((/*/(##*,*//, //......*#&&&%#/(///*.......,/
+				.,,*/#,,,,*(##((/((%%%#(*,,.,,,*,,,(**(**((/,*/,*%%%%/*,..,*(//*,,,,.,........,(
+				,,***(,,,,/%%###//((%%%%%**...,,,,(/,*/,////(*,...,,,*,*,*,,/(/*,.*,,.........*(
+				,,,,*(,,/&&#(/(%#////(#%%#(,,,..*.,,*///,*//*,....,.*..*,..,.,*,,,,.,*........*(
+				.,,,,(*%%(#%&@@&#%/**//(#(((,,,....,,****,*,.,.......*.,.,.,...,,,,,,,..    .,/#
+				.,,,/&&&&%%#/((&@%(/(///(/#((,*,.,...,,*,,, .,,......*,**.,,,...*,,,.,...   ,/(%
+				.,,#&&&@@@@@%#/(#&%#(*/(////*(**,.*,..,.,,,,....,.....,..,,*,,.,..,,.....  ,*#(#
+				,,#%%#%%%&@@@&///###///((///////*,,,,,,,,,..,........,,...,..,,.,****/*.. .#/#(#
+				*/%%%%%%&%%%@@%//*(#///(#((/***//,,,...,,.,*.,.,........ .. ..***//(((/#.. #(((#
+				(#%%&&@@@@&&&&%########%%%%%%#////,.,,,..,,*//*/,*,,.,,,.    (%%#%#%%%%%#,,/&%%&
+				/(%&&&&@&&&&&&%%%%#%%%%%%%%%&&&%%#//(,*,,*(#(///*##//#(,,.....%###########(.*##%
+				,,,#%%&%@&%#(///*/**/**/////*/////((#(/((/((//((*(#######(...**#################
+				..*/**//****,,,,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,*****#/#&#&*,,,,,,,.,,,...
+				""";
+
+		// System.out.println(textBlock);
+
+		Element[] player = generateArray();
+		playSomething(player, scan);
+		scan.close();
 	}
-		
-		private static void volumeUpAudio(Audio a) {
-			a.volumeUp();
-		}
-		
-		private static void volumeDwnAudio(Audio a) {
-			a.volumeDwn();
-		}
-	
-		private static void volumeUpVideo(Video v) {
-			v.volumeUp();
-		}
-		
-		private static void volumeDwnVideo(Video v) {
-			v.volumeDwn();
-		}
 
-		private static void playAudio(Audio a) {
-			a.play();
-		}
-		
-		private static void playVideo(Video v) {
-			v.play();
-		}
-		
-		private static void showImg(Image i) {
-			i.play();
-		}
-		
-		private static void playSomething(Element[] e) {
-			generateArray(e);
-			System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
+	private static void playSomething(Element[] e, Scanner scan) {
+		System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
+
+		while (scan.hasNextInt()) {
 			int input = Integer.parseInt(scan.nextLine());
-			while(input != 0) {
-				switch(input) {
-					case 1:
-						e[0].play();
-						break;
-					case 2:
-						e[1].play();
-						break;
-					case 3:
-						e[2].play();
-						break;
-					case 4:
-						e[3].play();
-						break;
-					case 5:
-						e[4].play();
-						break;
-					default:
-						System.out.println("Value Not Recognized");
-				}
-				System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
-		        input = Integer.parseInt(scan.nextLine());
+
+			if (input == 0) {
+				break;
 			}
-			System.out.println("The Cycle Has Ended");
-			scan.close();
+			if (input >= 1 && input <= 5) {
+				if (e[input - 1] instanceof Audio) {
+					e[input - 1].play();
+					System.out.println("Press 1 To Change The Volume. Press 0 If Everything's Fine.");
+					e[input - 1].volumeControl();
+					e[input - 1].play();
+				} else if (e[input - 1] instanceof Video) {
+					boolean options = true;
+					e[input - 1].play();
+					while (options) {
+						System.out.println(
+								"Press 1 To Change The Volume or 2 To Change The Brightness. Press 0 If Everything's Fine.");
+						int mod = Integer.parseInt(scan.nextLine());
+						switch (mod) {
+						case 0:
+							options = false;
+							break;
+						case 1:
+							System.out.println("Change The Volume");
+							e[input - 1].volumeControl();
+							e[input - 1].play();
+							break;
+						case 2:
+							System.out.println("Change The Brightness");
+							e[input - 1].brightnessControl();
+							e[input - 1].play();
+							break;
+						default:
+							System.out.println("Error: Invalid Input");
+						}
+					}
+					System.out.println("Enjoy Your Piece Of Content");
+				} else if (e[input - 1] instanceof Image) {
+					e[input - 1].play();
+					System.out.println("Press 1 To Change The Brightness. Press 0 If Everything's Fine.");
+					e[input - 1].brightnessControl();
+					e[input - 1].play();
+				}
+			} else {
+				System.out.println("Value Not Recognized");
+			}
+			System.out.println("Choose A Number Between 1 And 5 To Play Something Or 0 To Exit");
 		}
-		
-		private static void generateArray(Element[] e) {
-			for (int i = 0; i < 5; i++) {
-	        	
-	            System.out.print("Select the item type (1 = Audio, 2 = Video, 3 = Image): ");
-	            int type = Integer.parseInt(scan.nextLine());
+		System.out.println("The Cycle Has Ended. Enjoy The Rest Of Your Day");
+	}
 
-	            switch (type) {
-	                case 1:
-	                	System.out.print("Insert The Title For Your New Media Item: ");
-	                	String title = scan.nextLine();
-	                    System.out.print("Enter Audio duration: ");
-	                    int length = Integer.parseInt(scan.nextLine());
+	private static Element[] generateArray() {
+		Element[] e = new Element[5];
+		int media;
+		String title;
+		int length;
+		int brightness;
 
-	                    e[i] = new Audio(title, length);
-	                    break;
-	                case 2:
-	                	System.out.print("Insert The Title For Your New Media Item: ");
-	                	title = scan.nextLine();
-	                    System.out.print("Enter This Video's Duration: ");
-	                    length = Integer.parseInt(scan.nextLine());
+		for (int i = 0; i < 5; i++) {
+			System.out.print("Select the item type (1 = Audio, 2 = Video, 3 = Image): ");
+			media = Integer.parseInt(scan.nextLine());
 
-	                    e[i] = new Video(title, length);
-	                    break;
-	                case 3:
-	                	System.out.print("Insert The Title For Your New Media Item: ");
-	                	title = scan.nextLine();
-	                	System.out.print("Enter This Image's Brightness: ");
-	                	int brightness = Integer.parseInt(scan.nextLine());
-	                	e[i] = new Image(title, brightness);
-	                    break;
-	                default:
-	                    System.out.println("Value Not Recognized");
-	                    i--;
-	            }
-	        }
+			switch (media) {
+			case 1:
+				System.out.print("Insert The Title For Your New Audio Item: ");
+				title = scan.nextLine();
+				System.out.print("Enter Audio duration: ");
+				length = Integer.parseInt(scan.nextLine());
+				e[i] = new Audio(title, length);
+				break;
+			case 2:
+				System.out.print("Insert The Title For Your New Video Item: ");
+				title = scan.nextLine();
+				System.out.print("Enter This Video's Duration: ");
+				length = Integer.parseInt(scan.nextLine());
+				e[i] = new Video(title, length);
+				break;
+			case 3:
+				System.out.print("Insert The Title For Your New Image Item: ");
+				title = scan.nextLine();
+				e[i] = new Image(title);
+				break;
+			default:
+				System.out.println("Value Not Recognized");
+				i--;
+			}
 		}
+		return e;
+	}
+
 }
