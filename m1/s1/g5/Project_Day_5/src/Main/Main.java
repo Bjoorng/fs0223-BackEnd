@@ -54,7 +54,6 @@ public class Main {
 
 	private static void playSomething(Element[] e, Scanner scan) {
 		System.out.println("\u001B[46mChoose A Number Between 1 And 5 To Play Something Or 0 To Exit\u001B[0m");
-
 		while (scan.hasNextInt()) {
 			int input = Integer.parseInt(scan.nextLine());
 
@@ -64,17 +63,28 @@ public class Main {
 			if (input >= 1 && input <= 5) {
 				if (e[input - 1] instanceof Audio) {
 					e[input - 1].play();
-					System.out.println("\u001B[46mPress 1 To Change The Volume. Press 0 If Everything's Fine.\u001B[0m");
-					e[input - 1].volumeControl();
-					e[input - 1].play();
+					System.out
+							.println("\u001B[46mPress 1 To Change The Volume. Press 0 If Everything's Fine.\u001B[0m");
+					int audioMod = Integer.parseInt(scan.nextLine());
+					switch (audioMod) {
+					case 0:
+						break;
+					case 1:
+						e[input - 1].volumeControl();
+						e[input - 1].play();
+						break;
+					default:
+						System.out.println("\u001B[46mError: Invalid Input\u001B[0m");
+					}
+					System.out.println("\u001B[45mEnjoy Your Piece Of Content\u001B[0m");
 				} else if (e[input - 1] instanceof Video) {
 					boolean options = true;
 					e[input - 1].play();
 					while (options) {
 						System.out.println(
 								"\u001B[46mPress 1 To Change The Volume or 2 To Change The Brightness. Press 0 If Everything's Fine.\u001B[0m");
-						int mod = Integer.parseInt(scan.nextLine());
-						switch (mod) {
+						int videoMod = Integer.parseInt(scan.nextLine());
+						switch (videoMod) {
 						case 0:
 							options = false;
 							break;
@@ -95,9 +105,20 @@ public class Main {
 					System.out.println("\u001B[45mEnjoy Your Piece Of Content\u001B[0m");
 				} else if (e[input - 1] instanceof Image) {
 					e[input - 1].play();
-					System.out.println("\u001B[46mPress 1 To Change The Brightness. Press 0 If Everything's Fine.\u001B[0m");
-					e[input - 1].brightnessControl();
-					e[input - 1].play();
+					System.out.println(
+							"\u001B[46mPress 1 To Change The Brightness. Press 0 If Everything's Fine.\u001B[0m");
+					int imageMod = Integer.parseInt(scan.nextLine());
+					switch (imageMod) {
+					case 0:
+						break;
+					case 1:
+						e[input - 1].brightnessControl();
+						e[input - 1].play();
+						break;
+					default:
+						System.out.println("\u001B[46mError: Invalid Input\u001B[0m");
+					}
+					System.out.println("\u001B[45mEnjoy Your Piece Of Content\u001B[0m");
 				}
 			} else {
 				System.out.println("\u001B[41mValue Not Recognized");
@@ -114,7 +135,8 @@ public class Main {
 		int length;
 
 		for (int i = 0; i < 5; i++) {
-			System.out.print("\u001B[30;42mChoose The Type Of The Element You Want To Create: 1) Audio, 2) Video, 3) Image\u001B[0m ");
+			System.out.print(
+					"\u001B[30;42mChoose The Type Of The Element You Want To Create: 1) Audio, 2) Video, 3) Image\u001B[0m ");
 			media = Integer.parseInt(scan.nextLine());
 
 			switch (media) {
