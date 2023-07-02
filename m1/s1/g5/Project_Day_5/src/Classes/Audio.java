@@ -30,60 +30,53 @@ public class Audio extends Element implements Volume {
 	@Override
 	public void volumeUp() {
 		if (this.volume == 5) {
-			this.volume = 5;
 			System.out.println("Volume Can't Be Raised Any Higher");
 		} else {
 			this.volume++;
-			System.out.println("Volume Has Been Raised To " + this.volume);
+			System.out.println("Volume Has Been Raised To:" + this.volume);
 		}
 	}
 
 	@Override
 	public void volumeDwn() {
 		if (this.volume == 0) {
-			this.volume = 0;
 			System.out.println("Volume Can't Be Lowered Anymore");
 		} else {
 			this.volume--;
-			System.out.println("Volume Has Been Lowered To " + this.volume);
+			System.out.println("Volume Has Been Lowered To:" + this.volume);
 		}
 	}
 
 	@Override
 	public void volumeControl() {
-		int input = Integer.parseInt(scan.nextLine());
-		while (input != 0) {
-			System.out.println("Press 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop");
-			int upDwn = Integer.parseInt(scan.nextLine());
-			while (upDwn != 0) {
-				switch (upDwn) {
-				case 1:
-					if (this.volume == 5) {
-						this.volume = 5;
-						System.out.println("Volume Can't Be Raised");
-					} else {
-						this.volume++;
-						System.out.println("Volume Has Been Raised To:" + this.volume);
-					}
-					break;
-				case 2:
-					if (this.volume == 0) {
-						this.volume = 0;
-						System.out.println("Volume Can't Be Lowered");
-					} else {
-						this.volume--;
-						System.out.println("Volume Has Been Lowered To:" + this.volume);
-					}
-					break;
-				default:
-					System.out.println("Error");
-				}
-				System.out.println("Press 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop");
-				upDwn = Integer.parseInt(scan.nextLine());
-			}
+		while (true) {
+			System.out.println("\u001B[42mPress 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop\u001B[0m");
+			int choice = Integer.parseInt(scan.nextLine());
 
-			System.out.println("Press 1 To Continue Adjusting Volume or 0 To Exit Volume Control");
-			input = Integer.parseInt(scan.nextLine());
+			switch (choice) {
+			case 1:
+				if (volume < 5) {
+					volume++;
+					System.out.println("\u001B[36;40mVolume Has Been Raised To: " + volume + "\u001B[0m");
+				} else {
+					System.out.println("\u001B[33;41mVolume Can't Be Raised\u001B[0m");
+				}
+				break;
+			case 2:
+				if (volume > 0) {
+					volume--;
+					System.out.println("\u001B[36;40mVolume Has Been Lowered To: " + volume + "\u001B[0m");
+				} else {
+					System.out.println("\u001B[33;41mVolume Can't Be Lowered\u001B[0m");
+				}
+				break;
+			case 0:
+				System.out.println("\u001B[43mExiting Volume Control\u001B[0m");
+				return;
+
+			default:
+				System.out.println("\u001B[41mInvalid Choice\u001B[0m");
+			}
 		}
 	}
 

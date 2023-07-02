@@ -97,31 +97,31 @@ public class Video extends Element implements Brightness, Volume {
 	public void volumeControl() {
 		int upDwn;
 		do {
-			System.out.println("Press 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop");
+			System.out.println("\u001B[42mPress 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop\u001B[0m");
 			upDwn = Integer.parseInt(scan.nextLine());
 
 			switch (upDwn) {
 			case 1:
-				if (this.volume == 5) {
-					System.out.println("Volume Can't Be Raised");
+				if (volume == 5) {
+					System.out.println("\u001B[33;41mVolume Can't Be Raised\u001B[0m");
 				} else {
-					this.volume++;
-					System.out.println("Volume Has Been Raised To:" + this.volume);
+					volume++;
+					System.out.println("\u001B[36;40mVolume Has Been Raised To:" + volume + "\u001B[0m");
 				}
 				break;
 			case 2:
-				if (this.volume == 0) {
-					System.out.println("Volume Can't Be Lowered");
+				if (volume == 0) {
+					System.out.println("\u001B[33;41mVolume Can't Be Lowered\u001B[0m");
 				} else {
-					this.volume--;
-					System.out.println("Volume Has Been Lowered To:" + this.volume);
+					volume--;
+					System.out.println("\u001B[36;40mVolume Has Been Lowered To:" + volume + "\u001B[0m");
 				}
 				break;
 			case 0:
-				System.out.println("Exiting Volume Control");
+				System.out.println("\u001B[43mExiting Volume Control\u001B[0m");
 				break;
 			default:
-				System.out.println("Error: Invalid Input");
+				System.out.println("\u001B[41mError: Invalid Input\u001B[0m");
 			}
 		} while (upDwn != 0);
 	}
@@ -130,31 +130,31 @@ public class Video extends Element implements Brightness, Volume {
 	public void brightnessControl() {
 		int upDwn;
 		do {
-			System.out.println("Press 1 To Raise The Volume Or 2 To Lower It. Press 0 To Stop");
+			System.out.println("\u001B[42mPress 1 To Raise The Brightness Or 2 To Lower It. Press 0 To Stop\u001B[0m");
 			upDwn = Integer.parseInt(scan.nextLine());
 
 			switch (upDwn) {
 			case 1:
 				if (this.brightness == 5) {
-					System.out.println("Volume Can't Be Raised");
+					System.out.println("\u001B[33;41mBrightness Can't Be Raised\u001B[0m");
 				} else {
 					this.brightness++;
-					System.out.println("Volume Has Been Raised To:" + this.brightness);
+					System.out.println("\u001B[36;40mBrightness Has Been Raised To:" + this.brightness + "\u001B[0m");
 				}
 				break;
 			case 2:
 				if (this.brightness == 0) {
-					System.out.println("Volume Can't Be Lowered");
+					System.out.println("\u001B[33;41mBrightness Can't Be Lowered\u001B[0m");
 				} else {
 					this.brightness--;
-					System.out.println("Volume Has Been Lowered To:" + this.brightness);
+					System.out.println("\u001B[36;40mBrightness Has Been Lowered To:" + this.brightness + "\u001B[0m");
 				}
 				break;
 			case 0:
-				System.out.println("Exiting Volume Control");
+				System.out.println("\u001B[43mExiting Brightness Control\u001B[0m");
 				break;
 			default:
-				System.out.println("Error: Invalid Input");
+				System.out.println("\u001B[41mError: Invalid Input\u001B[0m");
 			}
 		} while (upDwn != 0);
 	}

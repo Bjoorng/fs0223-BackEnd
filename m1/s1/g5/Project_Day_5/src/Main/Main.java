@@ -45,7 +45,7 @@ public class Main {
 				..*/**//****,,,,,,,,.,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,*****#/#&#&*,,,,,,,.,,,...
 				""";
 
-		// System.out.println(textBlock);
+		System.out.println(textBlock);
 
 		Element[] player = generateArray();
 		playSomething(player, scan);
@@ -112,34 +112,33 @@ public class Main {
 		int media;
 		String title;
 		int length;
-		int brightness;
 
 		for (int i = 0; i < 5; i++) {
-			System.out.print("Select the item type (1 = Audio, 2 = Video, 3 = Image): ");
+			System.out.print("\u001B[30;42mChoose The Type Of The Element You Want To Create: 1) Audio, 2) Video, 3) Image\u001B[0m ");
 			media = Integer.parseInt(scan.nextLine());
 
 			switch (media) {
 			case 1:
-				System.out.print("Insert The Title For Your New Audio Item: ");
+				System.out.print("\u001B[30;42mInsert The Title For Your New Audio Item:\u001B[0m ");
 				title = scan.nextLine();
-				System.out.print("Enter Audio duration: ");
+				System.out.print("\u001B[30;42mEnter Audio duration:\u001B[0m ");
 				length = Integer.parseInt(scan.nextLine());
 				e[i] = new Audio(title, length);
 				break;
 			case 2:
-				System.out.print("Insert The Title For Your New Video Item: ");
+				System.out.print("\u001B[30;42mInsert The Title For Your New Video Item:\u001B[0m ");
 				title = scan.nextLine();
-				System.out.print("Enter This Video's Duration: ");
+				System.out.print("\u001B[30;42mEnter This Video's Duration:\u001B[0m ");
 				length = Integer.parseInt(scan.nextLine());
 				e[i] = new Video(title, length);
 				break;
 			case 3:
-				System.out.print("Insert The Title For Your New Image Item: ");
+				System.out.print("\u001B[30;42mInsert The Title For Your New Image Item:\u001B[0m ");
 				title = scan.nextLine();
 				e[i] = new Image(title);
 				break;
 			default:
-				System.out.println("Value Not Recognized");
+				System.out.println("\u001B[41mValue Not Recognized\u001B[0m");
 				i--;
 			}
 		}
