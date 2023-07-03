@@ -1,0 +1,44 @@
+15:11:25.987 [main] INFO  Main.MainClass - [I@7c7b252e
+15:11:25.991 [main] DEBUG Main.MainClass - loggo debug
+15:11:25.991 [main] WARN  Main.MainClass - loggo warn
+15:11:25.991 [main] ERROR Main.MainClass - loggo error
+15:12:12.433 [main] INFO  Main.MainClass - [I@7c7b252e
+15:12:12.437 [main] DEBUG Main.MainClass - loggo debug
+15:12:12.437 [main] WARN  Main.MainClass - loggo warn
+15:12:12.437 [main] ERROR Main.MainClass - loggo error
+15:12:24.493 [main] INFO  Main.MainClass - [I@7c7b252e
+15:12:24.496 [main] DEBUG Main.MainClass - loggo debug
+15:12:24.496 [main] WARN  Main.MainClass - loggo warn
+15:12:24.496 [main] ERROR Main.MainClass - loggo error
+15:13:41.887 [main] INFO  Main.MainClass - [I@7c7b252e
+15:13:41.891 [main] DEBUG Main.MainClass - loggo debug
+15:13:41.892 [main] WARN  Main.MainClass - loggo warn
+15:13:41.892 [main] ERROR Main.MainClass - loggo error
+15:16:07.547 [main] INFO  Main.MainClass - [1, 1, 10, 10, 10]
+15:16:07.550 [main] DEBUG Main.MainClass - loggo debug
+15:16:07.550 [main] WARN  Main.MainClass - loggo warn
+15:16:07.550 [main] ERROR Main.MainClass - loggo error
+15:16:13.148 [main] INFO  Main.MainClass - [6, 4, 10, 7, 5]
+15:16:13.151 [main] DEBUG Main.MainClass - loggo debug
+15:16:13.151 [main] WARN  Main.MainClass - loggo warn
+15:16:13.151 [main] ERROR Main.MainClass - loggo error
+15:16:14.168 [main] INFO  Main.MainClass - [5, 6, 3, 7, 4]
+15:16:14.171 [main] DEBUG Main.MainClass - loggo debug
+15:16:14.171 [main] WARN  Main.MainClass - loggo warn
+15:16:14.171 [main] ERROR Main.MainClass - loggo error
+15:16:14.883 [main] INFO  Main.MainClass - [2, 10, 9, 1, 7]
+15:16:14.887 [main] DEBUG Main.MainClass - loggo debug
+15:16:14.887 [main] WARN  Main.MainClass - loggo warn
+15:16:14.887 [main] ERROR Main.MainClass - loggo error
+15:16:15.671 [main] INFO  Main.MainClass - [9, 1, 1, 4, 7]
+15:16:15.674 [main] DEBUG Main.MainClass - loggo debug
+15:16:15.674 [main] WARN  Main.MainClass - loggo warn
+15:16:15.674 [main] ERROR Main.MainClass - loggo error
+15:21:30.280 [main] INFO  Main.MainClass - [8, 10, 1, 9, 3]
+15:21:30.284 [main] DEBUG Main.MainClass - loggo debug
+15:21:30.284 [main] WARN  Main.MainClass - loggo warn
+15:21:30.284 [main] ERROR Main.MainClass - loggo error
+15:21:31.057 [main] INFO  Main.MainClass - [8, 8, 2, 3, 8]
+15:21:31.060 [main] DEBUG Main.MainClass - loggo debug
+15:21:31.060 [main] WARN  Main.MainClass - loggo warn
+15:21:31.061 [main] ERROR Main.MainClass - loggo error

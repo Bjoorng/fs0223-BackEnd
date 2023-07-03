@@ -46,7 +46,7 @@ public class Main {
 				""";
 
 		System.out.println(textBlock);
-
+		
 		Element[] player = generateArray();
 		playSomething(player, scan);
 		scan.close();
