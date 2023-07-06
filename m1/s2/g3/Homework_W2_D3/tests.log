@@ -555,3 +555,29 @@
 19:26:55.304 [Thread-0] INFO  Thread.TestThread - N.9: £
 19:26:56.309 [Thread-1] INFO  Thread.TestThread - N.10: #
 19:26:56.309 [Thread-0] INFO  Thread.TestThread - N.10: £
+14:58:25.102 [Thread-1] INFO  Thread.TestThread - N.1: #
+14:58:25.102 [Thread-2] INFO  Thread.ThreadArr1 - Array Sum:147886
+14:58:25.102 [Thread-0] INFO  Thread.TestThread - N.1: £
+14:58:25.106 [Thread-3] INFO  Thread.ThreadArr1 - Array Sum:152605
+14:58:25.106 [Thread-4] INFO  Thread.ThreadArr1 - Array Sum:145864
+14:58:25.106 [main] INFO  Main.MainClass - Sum Of All The Arrays: 446355
+14:58:25.116 [main] INFO  Main.MainClass - Text Written On Filedocuments\attendance.txt
+14:58:25.118 [main] ERROR Main.MainClass - Empty File
+14:58:26.109 [Thread-1] INFO  Thread.TestThread - N.2: #
+14:58:26.109 [Thread-0] INFO  Thread.TestThread - N.2: £
+14:58:27.116 [Thread-1] INFO  Thread.TestThread - N.3: #
+14:58:27.116 [Thread-0] INFO  Thread.TestThread - N.3: £
+14:58:28.118 [Thread-0] INFO  Thread.TestThread - N.4: £
+14:58:28.118 [Thread-1] INFO  Thread.TestThread - N.4: #
+14:58:29.128 [Thread-0] INFO  Thread.TestThread - N.5: £
+14:58:29.128 [Thread-1] INFO  Thread.TestThread - N.5: #
+14:58:30.140 [Thread-1] INFO  Thread.TestThread - N.6: #
+14:58:30.140 [Thread-0] INFO  Thread.TestThread - N.6: £
+14:58:31.151 [Thread-1] INFO  Thread.TestThread - N.7: #
+14:58:31.151 [Thread-0] INFO  Thread.TestThread - N.7: £
+14:58:32.162 [Thread-1] INFO  Thread.TestThread - N.8: #
+14:58:32.162 [Thread-0] INFO  Thread.TestThread - N.8: £
+14:58:33.168 [Thread-1] INFO  Thread.TestThread - N.9: #
+14:58:33.168 [Thread-0] INFO  Thread.TestThread - N.9: £
+14:58:34.174 [Thread-0] INFO  Thread.TestThread - N.10: £
+14:58:34.174 [Thread-1] INFO  Thread.TestThread - N.10: #
