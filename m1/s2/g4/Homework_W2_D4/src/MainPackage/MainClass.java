@@ -27,10 +27,10 @@ public class MainClass {
 		LocalDate orderDate2 = LocalDate.of(2021, 6, 10);
 		LocalDate orderDate3 = LocalDate.of(2021, 3, 11);
 		LocalDate orderDate4 = LocalDate.of(2021, 2, 25);
-		LocalDate deliveryDate1 = LocalDate.of(2021,3,16);
+		LocalDate deliveryDate1 = LocalDate.of(2021,1,16);
 		LocalDate deliveryDate2 = LocalDate.of(2021,6,15);
-		LocalDate deliveryDate3 = LocalDate.of(2021,1,16);
-		LocalDate deliveryDate4 = LocalDate.of(2021,9,30);
+		LocalDate deliveryDate3 = LocalDate.of(2021,3,16);
+		LocalDate deliveryDate4 = LocalDate.of(2021,2,30);
 
 		Customer customer1 = new Customer("Mario Rossi", 1);
 		Customer customer2 = new Customer("Giuseppe Verdi", 1);
@@ -128,8 +128,7 @@ public class MainClass {
 
 	private static List<Product> filterByClient() {
 		List<Product> byClient = orderList.stream().filter(e -> e.getCustomer().getTier() == 2)
-				.filter(e -> e.getOrderDate().isAfter(LocalDate.of(2021, 2, 1)))
-				.filter(e -> e.getOrderDate().isBefore(LocalDate.of(2021, 4, 1)))
+				.filter(e -> e.getOrderDate().isAfter(LocalDate.of(2021, 2, 1)) && e.getOrderDate().isBefore(LocalDate.of(2021, 4, 1)))
 				.flatMap(e -> e.getProducts().stream())
 				.distinct()
 				.collect(Collectors.toList());
