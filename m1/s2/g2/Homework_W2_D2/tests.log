@@ -1,0 +1,65 @@
+15:02:31.839 [main] INFO  Main.MainClass - casa
+15:02:31.843 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 3
+15:02:31.843 [main] INFO  Main.MainClass - cose
+15:02:31.843 [main] INFO  Main.MainClass - casa
+15:02:31.843 [main] INFO  Main.MainClass - caso
+15:03:08.716 [main] INFO  Main.MainClass - gatto
+15:03:08.720 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 4
+15:03:08.720 [main] INFO  Main.MainClass - remo
+15:03:08.720 [main] INFO  Main.MainClass - casa
+15:03:08.720 [main] INFO  Main.MainClass - mare
+15:03:08.720 [main] INFO  Main.MainClass - gatto
+15:07:27.018 [main] INFO  Main.MainClass - casa
+15:07:27.021 [main] INFO  Main.MainClass - mare
+15:07:27.021 [main] INFO  Main.MainClass - gatto
+15:07:27.023 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 3
+15:07:27.023 [main] INFO  Main.MainClass - casa
+15:07:27.023 [main] INFO  Main.MainClass - mare
+15:07:27.023 [main] INFO  Main.MainClass - gatto
+15:20:53.417 [main] INFO  Main.MainClass - Choose The Number Of Words To Insert (n): 
+15:21:05.598 [main] INFO  Main.MainClass - 
+Duplicated Words:
+15:21:05.599 [main] INFO  Main.MainClass - casa
+15:21:05.599 [main] INFO  Main.MainClass - mare
+15:21:05.599 [main] INFO  Main.MainClass - gatto
+15:21:05.599 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 3
+15:21:05.599 [main] INFO  Main.MainClass - 
+List Of Distinct Words:
+15:21:05.599 [main] INFO  Main.MainClass - casa
+15:21:05.599 [main] INFO  Main.MainClass - mare
+15:21:05.599 [main] INFO  Main.MainClass - gatto
+15:21:50.941 [main] INFO  Main.MainClass - 
+Duplicated Words:
+15:21:50.945 [main] INFO  Main.MainClass - casa
+15:21:50.945 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 5
+15:21:50.945 [main] INFO  Main.MainClass - 
+List Of Distinct Words:
+15:21:50.945 [main] INFO  Main.MainClass - casa
+15:21:50.945 [main] INFO  Main.MainClass - mare
+15:21:50.945 [main] INFO  Main.MainClass - miao
+15:21:50.945 [main] INFO  Main.MainClass - gatto
+15:21:50.945 [main] INFO  Main.MainClass - cibo
+15:23:50.373 [main] INFO  Main.MainClass - 
+Duplicated Words:
+15:23:50.377 [main] INFO  Main.MainClass - mare
+15:23:50.377 [main] INFO  Main.MainClass - 
+Number Of Distinct Words: 4
+15:23:50.377 [main] INFO  Main.MainClass - 
+List Of Distinct Words:
+15:23:50.377 [main] INFO  Main.MainClass - casa
+15:23:50.377 [main] INFO  Main.MainClass - mare
+15:23:50.377 [main] INFO  Main.MainClass - gatto
+15:23:50.377 [main] INFO  Main.MainClass - cibo
+15:24:51.345 [main] INFO  Main.MainClass - Duplicated Words:
+15:24:51.348 [main] INFO  Main.MainClass - gatto
+15:24:51.349 [main] INFO  Main.MainClass - Number Of Distinct Words: 4
+15:24:51.349 [main] INFO  Main.MainClass - List Of Distinct Words:
+15:24:51.349 [main] INFO  Main.MainClass - casa
+15:24:51.349 [main] INFO  Main.MainClass - mare
+15:24:51.349 [main] INFO  Main.MainClass - noia
+15:24:51.349 [main] INFO  Main.MainClass - gatto
