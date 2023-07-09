@@ -49,4 +49,9 @@ public class CBook extends CElement {
 				+ "/" + book.genre;
 	}
 	
+	public static CBook fromStringFile(String stringFile) {
+		String[] split = stringFile.split("/");
+		
+		return new CBook(split[1], split[2], Integer.valueOf(split[3]), Integer.valueOf(split[4]), split[5], Genre.valueOf(split[6]));
+	}
 }

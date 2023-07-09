@@ -37,4 +37,9 @@ public class CMagazine extends CElement {
 				+ "/" + mag.periodicity;
 	}
 
+	public static CMagazine fromStringFile(String stringFile) {
+		String[] split = stringFile.split("/");
+		
+		return new CMagazine(split[1], split[2], Integer.valueOf(split[3]), Integer.valueOf(split[4]), Periodicity.valueOf(split[5]));
+	}
 }
