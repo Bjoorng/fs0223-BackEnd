@@ -28,13 +28,13 @@ public class CMagazine extends CElement {
 		return "CMagazine [isbn=" + isbn + ", title=" + title + ", year=" + year + ", pages=" + pages + "]";
 	}
 	
-	public static String writeOnFile(CMagazine mag) {
+	public static String writeOnFile(CMagazine m) {
 		return CBook.class.getSimpleName()
-				+ "/" + mag.isbn 
-				+ "/" + mag.title 
-				+ "/" + mag.year 
-				+ "/" + mag.pages 
-				+ "/" + mag.periodicity;
+				+ "/" + m.isbn 
+				+ "/" + m.title 
+				+ "/" + m.year 
+				+ "/" + m.pages 
+				+ "/" + m.periodicity;
 	}
 
 	public static CMagazine fromStringFile(String stringFile) {

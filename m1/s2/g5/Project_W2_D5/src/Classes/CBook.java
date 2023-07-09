@@ -39,14 +39,14 @@ public class CBook extends CElement {
 				+ author + ", genre=" + genre + "]";
 	}
 
-	public static String writeOnFile(CBook book) {
+	public static String writeOnFile(CBook b) {
 		return CBook.class.getSimpleName()
-				+ "/" + book.isbn 
-				+ "/" + book.title 
-				+ "/" + book.year 
-				+ "/" + book.pages 
-				+ "/" + book.author 
-				+ "/" + book.genre;
+				+ "/" + b.isbn 
+				+ "/" + b.title 
+				+ "/" + b.year 
+				+ "/" + b.pages 
+				+ "/" + b.author 
+				+ "/" + b.genre;
 	}
 	
 	public static CBook fromStringFile(String stringFile) {
