@@ -78,8 +78,7 @@ public class Video extends Element implements Brightness, Volume {
 			System.out.println("Brightness Has Been Lowered To " + this.brightness);
 		}
 	}
-
-	@Override
+	
 	public void play() {
 		for (int i = 0; i < this.length; i++) {
 			System.out.print(this.title);

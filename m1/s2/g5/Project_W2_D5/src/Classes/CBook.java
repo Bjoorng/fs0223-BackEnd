@@ -1,9 +1,8 @@
-
 package Classes;
 
 import Enums.Genre;
 
-public class CBook extends CElement{
+public class CBook extends CElement {
 
 	protected String isbn;
 	protected String title;
@@ -22,8 +21,16 @@ public class CBook extends CElement{
 		return author;
 	}
 
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
 	public Genre getGenre() {
 		return genre;
+	}
+
+	public void setGenre(Genre genre) {
+		this.genre = genre;
 	}
 
 	@Override
@@ -32,4 +39,14 @@ public class CBook extends CElement{
 				+ author + ", genre=" + genre + "]";
 	}
 
+	public static String writeOnFile(CBook book) {
+		return CBook.class.getSimpleName()
+				+ "/" + book.isbn 
+				+ "/" + book.title 
+				+ "/" + book.year 
+				+ "/" + book.pages 
+				+ "/" + book.author 
+				+ "/" + book.genre;
+	}
+	
 }
