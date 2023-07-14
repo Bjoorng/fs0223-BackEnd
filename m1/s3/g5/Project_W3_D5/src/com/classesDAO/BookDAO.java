@@ -21,9 +21,9 @@ public class BookDAO extends JpaUtils{
 		System.out.println(b);
 	}
 	
-	public Book bookDetails(long id) throws SQLException {
+	public Book bookDetails(String isbn) throws SQLException {
 		em.getTransaction().begin();
-		Book b = em.find(Book.class, id);
+		Book b = em.find(Book.class, isbn);
 		em.getTransaction().commit();
 		return b;
 	}

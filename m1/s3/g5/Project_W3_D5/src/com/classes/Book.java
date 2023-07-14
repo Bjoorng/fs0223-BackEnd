@@ -15,7 +15,7 @@ public class Book extends Element{
 	private String author;
 	@Enumerated(EnumType.STRING)
 	private Genre genre;
-	
+
 	public Book(String isbn, String title, LocalDate publishedIn, int pages, String author, Genre genre) {
 		super(isbn, title, publishedIn, pages);
 		this.author = author;
