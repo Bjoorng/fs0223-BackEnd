@@ -26,8 +26,8 @@ public class MainClass {
 		//usersDAO.saveUser(u1);
 		//bookDAO.searchByIsbn("A02M55");
 		//bookDAO.searchBooksByYear(1949);
-		loanDAO.saveLoan(l1);
-		loanDAO.saveLoan(l2);
+		//bookDAO.searchByAuthor("George Orwell");
+		//bookDAO.searchBooksByYear(1955);
 	}
 
 }
