@@ -41,6 +41,11 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.6.15.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>Homework_W3_D2</groupId>
+			<artifactId>Homework_W3_D2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>

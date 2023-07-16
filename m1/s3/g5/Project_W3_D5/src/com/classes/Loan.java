@@ -2,6 +2,7 @@ package com.classes;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,91 +13,84 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Loan {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	@ManyToOne
-	private User user;
-	@ManyToOne
-	@JoinColumn(name = "book_id")
-	private Book book;
-	@ManyToOne
-	@JoinColumn(name = "magazine_id")
-	private Magazine magazine;
-	private LocalDate loanStDate;
-	private LocalDate loanEndDate;
-	private LocalDate returnDate;
-	
-	public Loan() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-	public Loan(User user, Book book, Magazine magazine, LocalDate loanStDate, LocalDate loanEndDate, LocalDate returnDate) {
-		super();
-		this.user = user;
-		this.book = book;
-		this.magazine = magazine;
-		this.loanStDate = loanStDate;
-		this.loanEndDate = loanEndDate;
-		this.returnDate = returnDate;
-	}
+    @ManyToOne
+    private Users user;
 
-	public User getUser() {
-		return user;
-	}
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "book_id")
+    private Book book;
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    private LocalDate loanStDate;
+    private LocalDate loanEndDate;
+    private LocalDate returnDate;
 
-	public Book getBook() {
-		return book;
-	}
+    public Loan() {
+        super();
+    }
 
-	public void setBook(Book book) {
-		this.book = book;
-	}
+    public Loan(Users user, Book book, LocalDate loanStDate, LocalDate loanEndDate) {
+        super();
+        this.user = user;
+        this.book = book;
+        this.loanStDate = loanStDate;
+        this.loanEndDate = loanEndDate;
+    }
 
-	public Magazine getMagazine() {
-		return magazine;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setMagazine(Magazine magazine) {
-		this.magazine = magazine;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public LocalDate getLoanStDate() {
-		return loanStDate;
-	}
+    public Users getUser() {
+        return user;
+    }
 
-	public void setLoanStDate(LocalDate loanStDate) {
-		this.loanStDate = loanStDate;
-	}
+    public void setUser(Users user) {
+        this.user = user;
+    }
 
-	public LocalDate getLoanEndDate() {
-		return loanEndDate;
-	}
+    public Book getBook() {
+        return book;
+    }
 
-	public void setLoanEndDate(LocalDate loanEndDate) {
-		this.loanEndDate = loanEndDate;
-	}
+    public void setBook(Book book) {
+        this.book = book;
+    }
 
-	public LocalDate getReturnDate() {
-		return returnDate;
-	}
+    public LocalDate getLoanStDate() {
+        return loanStDate;
+    }
 
-	public void setReturnDate(LocalDate returnDate) {
-		this.returnDate = returnDate;
-	}
+    public void setLoanStDate(LocalDate loanStDate) {
+        this.loanStDate = loanStDate;
+    }
 
-	public String toStringBook() {
-		return "Loan [user=" + user + ", book=" + book + ", loanStDate=" + loanStDate + ", loanEndDate="
-				+ loanEndDate + ", returnDate=" + returnDate + "]";
-	}
-	
-	public String toStringMagazine() {
-		return "Loan [user=" + user + ", magazine=" + magazine + ", loanStDate=" + loanStDate + ", loanEndDate="
-				+ loanEndDate + ", returnDate=" + returnDate + "]";
-	}
-	
+    public LocalDate getLoanEndDate() {
+        return loanEndDate;
+    }
+
+    public void setLoanEndDate(LocalDate loanEndDate) {
+        this.loanEndDate = loanEndDate;
+    }
+
+    public LocalDate getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Loan [user=" + user + ", book=" + book + ", loanStDate=" + loanStDate + ", loanEndDate="
+                + loanEndDate + ", returnDate=" + returnDate + "]";
+    }
 }

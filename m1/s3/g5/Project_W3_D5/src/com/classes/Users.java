@@ -2,13 +2,14 @@ package com.classes;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Users {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,13 +17,14 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private LocalDate birthdate;
+	@Column(unique = true)
 	private String cardNum;
 	
-	public User() {
+	public Users() {
 		super();
 	}
 
-	public User(String firstName, String lastName, LocalDate birthdate, String cardNum) {
+	public Users(String firstName, String lastName, LocalDate birthdate, String cardNum) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
