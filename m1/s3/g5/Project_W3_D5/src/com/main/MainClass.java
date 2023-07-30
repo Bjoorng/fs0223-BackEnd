@@ -28,6 +28,7 @@ public class MainClass {
 		//bookDAO.searchBooksByYear(1949);
 		//bookDAO.searchByAuthor("George Orwell");
 		//bookDAO.searchBooksByYear(1955);
+		bookDAO.searchByTitle("Lord");
 	}
 
 }

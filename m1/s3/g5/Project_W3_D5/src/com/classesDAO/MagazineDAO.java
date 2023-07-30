@@ -24,13 +24,6 @@ public class MagazineDAO extends JpaUtils{
 		System.out.println(m);
 	}
 	
-	public Magazine magDetails(long id) throws SQLException {
-		em.getTransaction().begin();
-		Magazine m = em.find(Magazine.class, id);
-		em.getTransaction().commit();
-		return m;
-	}
-	
 	public Magazine searchByIsbn(String isbn) {
 		Magazine m = em.createQuery("SELECT m FROM Book m WHERE m.isbn = :isbn", Magazine.class)
 		        .setParameter("isbn", isbn)

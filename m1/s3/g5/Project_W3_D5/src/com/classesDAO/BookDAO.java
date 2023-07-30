@@ -55,7 +55,7 @@ public class BookDAO extends JpaUtils {
 
 	public List<Book> searchByAuthor(String author) {
 		TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b WHERE b.author = :author", Book.class);
-		query.setParameter("author", author);
+		query.setParameter("author", "%" + author + "%");
 		List<Book> books = query.getResultList();
 
 		System.out.println("Books by author: " + author);
