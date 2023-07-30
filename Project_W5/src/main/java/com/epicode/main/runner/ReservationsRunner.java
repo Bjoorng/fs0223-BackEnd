@@ -25,42 +25,25 @@ public class ReservationsRunner {
 	@Autowired ReservationService prs;
 	
 	public void run(String... args) throws Exception {
-		System.out.println("Gestione Prenotazione Runner... ");
+		System.out.println("runner... ");
 
-		Building e1 = edsc.createEdificio("Edificio 1", "Via Roma", "Milano");
-		Building e2 = edsc.createEdificio("Edificio 2", "Via Milano", "Roma");
+		Building b1 = edsc.createEdificio("B 1", "Via combinazione", "Milano");
+		Building b2 = edsc.createEdificio("B 2", "Via coordinata", "Roma");
+		Building b3 = edsc.createEdificio("B 3", "Via coordinata", "Roma");
+		Building b4 = edsc.createEdificio("B 4", "Via coordinata", "Roma");
 
-		WorkStation p1 = ps.createWorkStation("Postazione 1", Type.PRIVATE, 1, e1);
-		WorkStation p2 = ps.createWorkStation("Postazione 2", Type.MEETING_ROOM , 10, e2);
-		WorkStation p3 = ps.createWorkStation("Postazione 3", Type.OPEN_SPACE, 20, e1);
+		WorkStation ws1 = ps.createWorkStation("P 1", Type.PRIVATE, 1, b1);
+		WorkStation ws2 = ps.createWorkStation("P 2", Type.MEETING_ROOM , 10, b2);
+		WorkStation ws3 = ps.createWorkStation("P 3", Type.OPEN_SPACE, 20, b1);
 
-		User u1 = us.createUser("giuseppe_v","Giuseppe Verdi","g.verdi@example.com");
-		User u2 = us.createUser("mario_r","Mario Rossi","mario.rossi@example.com");
-		User u3 = us.createUser("f_neri","Francesca Neri","francescaneri@example.com");
-		User u4 = us.createUser("sara-rosa","Sara Rosa","sara_rosa@example.com");
+		User u1 = us.createUser("PeppeTheKing","Giuseppe Verdi","g.verdi@mail.com");
+		User u2 = us.createUser("ComboDoubleBoi","Mario Rossi","m.rossi@mail.com");
+		User u3 = us.createUser("MiSparoGiuro","Federica Meri","nomecognome@tiscali.com");
+		User u4 = us.createUser("Depre-4-Real","Maria Rosa","comesifa@hotmail.com");
 
-		Reservation pr1 = prs.createReservation(LocalDate.of(2023, 7, 29), u1, p1);
-		Reservation pr2 = prs.createReservation(LocalDate.of(2023, 7, 30), u2, p1);
-		Reservation pr3 = prs.createReservation(LocalDate.of(2023, 7, 25), u3, p3);
-		
-
-		//List<Edificio> listaEdifici = edsc.findAllEdifici();
-		//listaEdifici.forEach(e -> System.out.println(e));
-		
-		//List<Postazione> listaPostazioni = ps.findAllPostazioni();
-		//listaPostazioni.forEach(p -> System.out.println(p));
-		
-		//List<User> usersList = us.findAllUsers();
-		//usersList.forEach(u -> System.out.println(u));
-		
-		//List<Prenotazione> listaPrenotazioni = prs.findAllPrenotazioni();
-		//listaPrenotazioni.forEach(pr -> System.out.println(pr));
-		
-		// Per eliminare un utente nel db
-		//us.deleteUtenteById((long) 4);
-		
-		// Per trovare un elemento dall'id
-		//edsc.findEdificioById((long) 1);
-
+		Reservation res1 = prs.createReservation(LocalDate.of(2023, 7, 29), u1, ws1);
+		Reservation res2 = prs.createReservation(LocalDate.of(2023, 7, 30), u2, ws1);
+		Reservation res3 = prs.createReservation(LocalDate.of(2023, 7, 25), u3, ws3);
+ 
 	}	
 }
