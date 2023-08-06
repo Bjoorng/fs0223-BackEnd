@@ -45,5 +45,5 @@ public class ReservationsRunner {
 		Reservation res2 = prs.createReservation(LocalDate.of(2023, 7, 30), u2, ws1);
 		Reservation res3 = prs.createReservation(LocalDate.of(2023, 7, 25), u3, ws3);
  
-	}	
+	}
 }
